@@ -15,7 +15,10 @@ def add_text_to_image(text):
     font = ImageFont.truetype("helvetica.ttf", 35)
 
     # Specify the text and position
-    text_width, text_height = draw.textsize(text, font)  # Get the width and height of the text
+    # text_width, text_height = draw.textsize(text, font)  # Get the width and height of the text
+
+    left, top, right, bottom = font.getbbox(text)
+    text_width = right - left
 
     # Calculate the x-coordinate to center the text
     x = (width - text_width) / 2
