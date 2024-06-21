@@ -33,12 +33,15 @@ st.title("Add Invitees")
 
 text = st.text_input("Enter the name of the invitee (Ex - Mr & Mrs Ranasinghe & family):")
 
-downloads_path = os.path.join(os.path.expanduser("~"), "Downloads")
-modified_images_folder = os.path.join(downloads_path, "Modified Invitations")
-if not os.path.exists(modified_images_folder):
-    os.makedirs(modified_images_folder)
+# downloads_path = os.path.join(os.path.expanduser("~"), "Downloads")
+# modified_images_folder = os.path.join(downloads_path, "Modified Invitations")
+# if not os.path.exists(modified_images_folder):
+#     os.makedirs(modified_images_folder)
 
-output_path = os.path.join(modified_images_folder, f"{text}.jpeg")
+# output_path = os.path.join(modified_images_folder, f"{text}.jpeg")
+
+output_path =  os.path.join('images/', f"{text}.jpeg")
+print(output_path)
 
 if st.button("Add the name"):
     if text:
