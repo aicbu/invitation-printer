@@ -23,7 +23,7 @@ def add_text_to_image(text):
 st.title("Add Invitees")
 text = st.text_input("Enter the name of the invitee (Ex - Mr & Mrs Ranasinghe & family):")
 
-if st.button("Add the name"):
+if st.button("Preview"):
     if text:
         modified_image = add_text_to_image(text)
         
@@ -37,7 +37,7 @@ if st.button("Add the name"):
         
         # Create a download button
         st.download_button(
-            label="Download the modified invitation",
+            label="Download the Invitation",
             data=img_byte_arr,
             file_name=f"{text}.jpeg",
             mime="image/jpeg"
