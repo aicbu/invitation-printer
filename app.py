@@ -4,7 +4,7 @@ import io
 
 def add_text_to_image(text):
     # Open the JPEG image
-    image = Image.open("invitation_card.jpeg")
+    image = Image.open("homecoming_card.png")
     width, height = image.size
     # Create a drawing object
     draw = ImageDraw.Draw(image)
