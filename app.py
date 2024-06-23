@@ -4,23 +4,23 @@ import io
 
 def add_text_to_image(text):
     # Open the JPEG image
-    image = Image.open("homecoming_card.png")
+    image = Image.open("homecoming.jpg")
     width, height = image.size
     # Create a drawing object
     draw = ImageDraw.Draw(image)
     # Define the font for the text
-    font = ImageFont.truetype("helvetica.ttf", 35)
+    font = ImageFont.truetype("helvetica.ttf", 40)
     # Specify the text and position
     left, top, right, bottom = font.getbbox(text)
     text_width = right - left
     # Calculate the x-coordinate to center the text
     x = (width - text_width) / 2
-    y = 730  # Adjust the y-coordinate as needed
+    y = 750  # Adjust the y-coordinate as needed
     # Add the text to the image
     draw.text((x, y), text, font=font, fill=(169, 104, 0))
     return image
 
-st.title("Add Invitees")
+st.title("Add Invitees - Homecoming")
 text = st.text_input("Enter the name of the invitee (Ex - Mr & Mrs Ranasinghe & family):")
 
 if st.button("Preview"):
